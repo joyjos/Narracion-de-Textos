@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Cargar los assets -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/main.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icon-audio.png"
+      type="image/png"
+    />
+
+    <title>Narrador de textos</title>
+  </head>
+  <body>
+
+    <header class="chat__header">
+      <img class="header__icon" src="./assets/img/icon-audio.png" alt="Narrador" />
+      <h1 class="header__title">Narrador de textos con IA</h1>
+    </header>
+
+    <section class="chat">
+
+        <div class="chat__messages">
+            <!-- Cargar los mensajes -->
+        </div>
+
+        <div class="chat__input-group">
+            <input class="chat__input" type="text" id="inputText" placeholder="Qué texto quieres narrar?">
+
+            <div class="chat__inputs">
+                <select class="chat__select" name="" id="targetSpeaker">
+                    <option value="alloy">Alloy</option>
+                    <option value="echo">Echo</option>
+                    <option value="fable">fable</option>
+                    <option value="onyx">Onyx</option>
+                    <option value="nova">Nova</option>
+                </select>
+
+                <button class="chat__button" id="sendButton">Narrar</button>
+            </div>
+        </div>
+        
+    </section>
+
+  </body>
+</html>
