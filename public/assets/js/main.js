@@ -1,5 +1,7 @@
 let sendButton = document.querySelector("#sendButton");
 
+const messagesContainer = document.querySelector(".chat__messages");
+
 sendButton.addEventListener("click", async () => {
   let inputText = document.querySelector("#inputText");
 
@@ -16,8 +18,15 @@ sendButton.addEventListener("click", async () => {
   userMesagge.className = "chat__message chat__message--user";
   userMesagge.textContent = text;
 
-  const messagesContainer = document.querySelector(".chat__messages");
   messagesContainer.appendChild(userMesagge);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  // Mensaje de cargando
+  const loading = document.createElement("div");
+  userMesagge.className = "chat__message chat__message--bot";
+  userMesagge.textContent = "Narrando...";
+
+  messagesContainer.appendChild(loading);
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
   // Petición Ajax al BackEnd
@@ -36,7 +45,8 @@ sendButton.addEventListener("click", async () => {
       const audioUrl = URL.createObjectURL(audioBlob);
 
       // Agregar el mensaje de la IA al chat
-      const botMessage = document.createElement("div");
+      //const botMessage = document.createElement("div");
+      const botMessage = loading;
       botMessage.className = "chat__message chat__message--bot";
       botMessage.innerHTML = `
             <audio controls>
