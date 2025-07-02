@@ -19,7 +19,7 @@ Este proyecto es una aplicación que convierte texto escrito en narraciones habl
 
   ~~~
   git clone https://github.com/joyjos/Narracion-de-Textos
-  cd Asistente-de-nutricion
+  cd Narracion-de-Textos
   ~~~
 
 - Install `node_modules`:
